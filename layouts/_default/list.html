@@ -10,7 +10,13 @@
     <section class="post-list">
         {{ range .Pages }}
         <article class="post-item">
-            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <h2>
+                {{ if .Params.external_url }}
+                <a href="{{ .Params.external_url }}" target="_blank" rel="noopener noreferrer">{{ .Title }}<span class="external-link-icon">↗</span></a>
+                {{ else }}
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                {{ end }}
+            </h2>
             <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
             {{ with .Summary }}
             <p>{{ . }}</p>

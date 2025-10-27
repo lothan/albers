@@ -145,6 +145,20 @@ main {
     color: var(--text-secondary);
 }
 
+/* External Link Icon */
+.external-link-icon {
+    display: inline-block;
+    margin-left: 0.25rem;
+    font-size: 0.75em;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.post-item h2 a:hover .external-link-icon,
+.post-item h3 a:hover .external-link-icon {
+    opacity: 1;
+}
+
 /* Single Post */
 .post-header {
     margin-bottom: 2rem;

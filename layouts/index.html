@@ -10,7 +10,13 @@
         <h2>Recent Posts</h2>
         {{ range first 10 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
         <article class="post-item">
-            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            <h3>
+                {{ if .Params.external_url }}
+                <a href="{{ .Params.external_url }}" target="_blank" rel="noopener noreferrer">{{ .Title }}<span class="external-link-icon">↗</span></a>
+                {{ else }}
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                {{ end }}
+            </h3>
             <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
             {{ with .Summary }}
             <p>{{ . }}</p>
