@@ -120,8 +120,8 @@ main {
 
 /* Post Items */
 .post-item {
-    margin-bottom: 2.5rem;
-    padding-bottom: 2.5rem;
+    margin-bottom: .5rem;
+    padding-bottom: .5rem;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -253,7 +253,7 @@ footer p {
 
 /* List Pages */
 .list-header {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 .list-description {
