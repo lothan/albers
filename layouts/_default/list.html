@@ -18,9 +18,6 @@
                 {{ end }}
             </h2>
             <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-            {{ with .Summary }}
-            <p>{{ . }}</p>
-            {{ end }}
         </article>
         {{ end }}
     </section>
