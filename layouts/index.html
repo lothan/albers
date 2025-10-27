@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="container">
+    <section class="home-intro">
+        {{ with .Site.Params.description }}
+        <p class="intro-text">{{ . }}</p>
+        {{ end }}
+    </section>
+
+    <section class="recent-posts">
+        <h2>Recent Posts</h2>
+        {{ range first 10 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+        <article class="post-item">
+            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            {{ with .Summary }}
+            <p>{{ . }}</p>
+            {{ end }}
+        </article>
+        {{ end }}
+    </section>
+</div>
+{{ end }}

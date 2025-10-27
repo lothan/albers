@@ -1,0 +1,12 @@
+name = "Albers"
+license = "MIT"
+licenselink = "https://github.com/yourname/albers/blob/main/LICENSE"
+description = "A minimal theme focused on readability and personal blogging"
+homepage = "https://github.com/yourname/albers"
+tags = ["blog", "minimal", "personal", "responsive", "clean"]
+features = ["responsive", "mobile-friendly", "minimal"]
+min_version = "0.41.0"
+
+[author]
+  name = "Your Name"
+  homepage = "https://yoursite.com"
