@@ -1,14 +1,8 @@
 {{ define "main" }}
 <div class="container">
-    <section class="home-intro">
-        {{ with .Site.Params.description }}
-        <p class="intro-text">{{ . }}</p>
-        {{ end }}
-    </section>
-
     <section class="recent-posts">
         <h2>Recent Posts</h2>
-        {{ range first 10 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+        {{ range first 5 .Site.RegularPages }}
         <article class="post-item">
             <h3>
                 {{ if .Params.external_url }}
@@ -21,5 +15,24 @@
         </article>
         {{ end }}
     </section>
+
+    {{ $highlighted := where .Site.RegularPages ".Params.highlighted" true }}
+    {{ if $highlighted }}
+    <section class="highlighted-posts">
+        <h2>Highlighted Posts</h2>
+        {{ range $highlighted }}
+        <article class="post-item">
+            <h3>
+                {{ if .Params.external_url }}
+                <a href="{{ .Params.external_url }}" target="_blank" rel="noopener noreferrer">{{ .Title }}<span class="external-link-icon">↗</span></a>
+                {{ else }}
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                {{ end }}
+            </h3>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        </article>
+        {{ end }}
+    </section>
+    {{ end }}
 </div>
 {{ end }}
