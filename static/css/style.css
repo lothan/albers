@@ -240,6 +240,15 @@ main {
     margin: 2rem 0;
 }
 
+.page-links .post-content img {
+    margin: 0;
+    display: block;
+}
+
+a:has(img) {
+    border-bottom: none;
+}
+
 .post-content code {
     background-color: var(--bg-secondary);
     padding: 0.125rem 0.375rem;
