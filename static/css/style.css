@@ -52,6 +52,14 @@ p {
     margin-bottom: 1rem;
 }
 
+ul, ol {
+    margin-bottom: 1rem;
+}
+
+/* ul li, ol li { */
+/*     margin-bottom: 0.5rem; */
+/* } */
+
 a {
     color: var(--text-primary);
     text-decoration: none;
@@ -150,6 +158,12 @@ main {
 .intro-text {
     font-size: 1.125rem;
     color: var(--text-secondary);
+}
+
+.about {
+    margin-top: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .recent-posts {

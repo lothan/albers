@@ -1,5 +1,9 @@
 {{ define "main" }}
 <div class="container">
+    <section class="about">
+        {{ readFile "content/_about.md" | markdownify }}
+    </section>
+
     <section class="recent-posts">
         <h2>Recent Posts</h2>
         {{ range first 5 .Site.RegularPages }}
