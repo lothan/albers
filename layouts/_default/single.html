@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="container">
-    <article class="post">
+    <article class="post page-{{ .File.TranslationBaseName }}">
         <header class="post-header">
             <h1>{{ .Title }}</h1>
             {{ if ne .Params.showDate false }}
