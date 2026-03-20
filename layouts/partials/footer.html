@@ -1,7 +1,4 @@
 <footer>
-    <div class="container">
-        <p>&copy; {{ now.Year }} {{ .Site.Title }}</p>
-    </div>
     {{ $footerPage := .Site.GetPage "/footer" }}
     {{ if $footerPage }}
     <div class="buttons-marquee">
@@ -27,4 +24,7 @@
         </div>
     </div>
     {{ end }}
+    <div class="container">
+        <p>&copy; {{ now.Year }} {{ .Site.Title }}</p>
+    </div>
 </footer>
