@@ -302,6 +302,40 @@ footer p {
     color: var(--text-secondary);
 }
 
+/* Buttons Marquee */
+.buttons-marquee {
+    overflow: hidden;
+    padding: 1rem 0;
+    background-color: var(--bg-primary);
+}
+
+.marquee-content {
+    display: flex;
+    gap: 1rem;
+    animation: marquee 30s linear infinite;
+    width: max-content;
+}
+
+.marquee-content img {
+    height: 31px;
+    width: 88px;
+    display: block;
+}
+
+.marquee-content a {
+    border: none;
+    line-height: 0;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 640px) {
     html {

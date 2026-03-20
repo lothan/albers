@@ -2,4 +2,29 @@
     <div class="container">
         <p>&copy; {{ now.Year }} {{ .Site.Title }}</p>
     </div>
+    {{ $footerPage := .Site.GetPage "/footer" }}
+    {{ if $footerPage }}
+    <div class="buttons-marquee">
+        <div class="marquee-content">
+            {{ range $footerPage.Params.buttons }}
+            {{ if .url }}
+            <a href="{{ .url }}" target="_blank" rel="noopener">
+                <img src="/footer/{{ .image }}" alt="{{ .alt }}">
+            </a>
+            {{ else }}
+            <img src="/footer/{{ .image }}" alt="{{ .alt }}">
+            {{ end }}
+            {{ end }}
+            {{ range $footerPage.Params.buttons }}
+            {{ if .url }}
+            <a href="{{ .url }}" target="_blank" rel="noopener">
+                <img src="/footer/{{ .image }}" alt="{{ .alt }}">
+            </a>
+            {{ else }}
+            <img src="/footer/{{ .image }}" alt="{{ .alt }}">
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
 </footer>
