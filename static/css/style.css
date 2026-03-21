@@ -52,6 +52,39 @@ p {
     margin-bottom: 1rem;
 }
 
+ul, ol {
+    margin-bottom: 1rem;
+}
+
+/* Lists section: tighter spacing for lists, paragraphs, and combinations */
+.list-description ul,
+.list-description ol,
+.list-preview ul,
+.list-preview ol {
+    margin-bottom: 0.5rem;
+}
+
+.list-description p,
+.list-preview p {
+    margin-bottom: 0.5rem;
+}
+
+/* Consecutive lists and paragraphs: minimal spacing */
+.list-description ul + ul,
+.list-description ol + ol,
+.list-description ul + p,
+.list-description p + ul,
+.list-description ol + p,
+.list-description p + ol,
+.list-preview ul + ul,
+.list-preview ol + ol,
+.list-preview ul + p,
+.list-preview p + ul,
+.list-preview ol + p,
+.list-preview p + ol {
+    margin-top: 0.25rem;
+}
+
 a {
     color: var(--text-primary);
     text-decoration: none;
@@ -305,6 +338,73 @@ footer p {
 
 .list-description {
     color: var(--text-secondary);
+}
+
+.list-category {
+    margin-bottom: 2.5rem;
+}
+
+.list-category h2 {
+    margin-bottom: 1rem;
+}
+
+.list-category h2 a {
+    border: none;
+}
+
+.list-category h2 a:hover {
+    color: var(--text-secondary);
+}
+
+.list-preview {
+    color: var(--text-primary);
+}
+
+.list-preview ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.list-preview li {
+    margin-bottom: 0.5rem;
+}
+
+.list-item {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.list-item:last-child {
+    border-bottom: none;
+}
+
+.list-item-title {
+    margin-bottom: 0.25rem;
+}
+
+.list-item-title strong {
+    font-size: 1rem;
+}
+
+.list-item time {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.list-item-description {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.list-item-description p {
+    margin-bottom: 0.5rem;
+}
+
+.list-item-description p:last-child {
+    margin-bottom: 0;
 }
 
 /* Buttons Marquee */
