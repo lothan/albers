@@ -56,33 +56,27 @@ ul, ol {
     margin-bottom: 1rem;
 }
 
-/* Lists section: tighter spacing for lists, paragraphs, and combinations */
+/* Lists in list pages: remove margins to make consecutive lists appear continuous */
 .list-description ul,
-.list-description ol,
-.list-preview ul,
-.list-preview ol {
-    margin-bottom: 0.5rem;
+.list-description ol {
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
-.list-description p,
-.list-preview p {
-    margin-bottom: 0.5rem;
-}
-
-/* Consecutive lists and paragraphs: minimal spacing */
-.list-description ul + ul,
-.list-description ol + ol,
-.list-description ul + p,
-.list-description p + ul,
-.list-description ol + p,
-.list-description p + ol,
-.list-preview ul + ul,
-.list-preview ol + ol,
-.list-preview ul + p,
-.list-preview p + ul,
-.list-preview ol + p,
-.list-preview p + ol {
+/* Nested lists for descriptions: no bullets, minimal spacing */
+li > ul,
+li > ol {
+    list-style: none;
+    padding-left: 1rem;
     margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+li > ul > li,
+li > ol > li {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
 }
 
 a {
