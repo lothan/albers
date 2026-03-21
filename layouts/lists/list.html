@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="container">
+    <header class="list-header">
+        <h1>{{ .Title }}</h1>
+        {{ with .Content }}
+        <div class="list-description">{{ . }}</div>
+        {{ end }}
+    </header>
+
+    {{ if .Sections }}
+    <!-- Main lists page: show summary (top items) from each category -->
+    {{ range .Sections }}
+    <section class="list-category">
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <div class="list-preview">
+            {{ .Summary }}
+        </div>
+    </section>
+    {{ end }}
+    {{ end }}
+</div>
+{{ end }}
