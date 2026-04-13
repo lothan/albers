@@ -65,17 +65,21 @@ ul, ol {
     margin-top: 0;
 }
 
-/* Nested lists for descriptions: no bullets, minimal spacing */
-li > ul,
-li > ol {
+/* Nested lists for list pages: no bullets, minimal spacing */
+.list-preview li > ul,
+.list-preview li > ol,
+.list-description li > ul,
+.list-description li > ol {
     list-style: none;
     padding-left: 1rem;
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
 }
 
-li > ul > li,
-li > ol > li {
+.list-preview li > ul > li,
+.list-preview li > ol > li,
+.list-description li > ul > li,
+.list-description li > ol > li {
     color: var(--text-secondary);
     font-size: 0.95rem;
     margin-bottom: 0.25rem;
@@ -186,6 +190,16 @@ main {
     margin-bottom: 2rem;
 }
 
+.bio ul,
+.bio ol {
+    list-style: disc;
+    padding-left: 1rem;
+}
+
+.bio ol {
+    list-style: decimal;
+}
+
 .recent-posts {
     margin-top: 1.5rem;
 }
@@ -287,6 +301,16 @@ main {
     margin: 1.5rem 0;
     color: var(--text-secondary);
     font-style: italic;
+}
+
+.post-content ul,
+.post-content ol {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+.post-content ol {
+    list-style: decimal;
 }
 
 /* Post Navigation */
